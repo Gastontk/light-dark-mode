@@ -102,8 +102,8 @@ a:focus {
 }
 
 img {
-  max-height: 300px;
-  max-width: 300px;
+  height: 300px;
+  width: 300px;
 }
 
 /* Projects Section */
@@ -259,11 +259,65 @@ input:checked + .slider::before {
   font-size: 30px;
   margin-right: 5px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width:800px) {
+  nav {
+    font-size: 10px;;
+  }
 
-  .about-container {
-    background: red;
-    flex-direction: column;
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 25px;
+    top: 15px;
+  }
+  
+  .theme-switch-wrapper span {
+    margin-right: 5px;
+    font-size: .8rem;
+  }
+  
+  .toggle-text {
+    position: relative;
+    /* top: -4px; */
+    right: 3px;
+    color: var(--on-background);
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 13px;
+    position: relative;
+    top:0px;
+    width: 40px;
+  }
+  .fa-sun {
+    font-size: 15px;;
+   
+  }
+  .slider {
+    height: 15px;
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+
+  .slider::before {
+    background: #fff;
+    bottom: 0px;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 0px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
   }
   
 }
